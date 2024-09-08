@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Game Graphs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="icon" href="favicons/favicon.ico">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style>
+        body {
+            font-family: 'SUSE', sans-serif;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #10101C;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 60px;
+        }
+        p{
+            text-align: center;
+            font-weight: 400;
+        }
+        .social-media {
+            text-align: center;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: #3AE8BD;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .social-media a:hover {
+            color: #7950E5;
+        }
+
+        h2 {
+            margin-top: 150px;
+            font-size: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr; /* Start with a single column by default */
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* For larger screens, switch to 3 columns */
+        @media (min-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .avatar {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            height: 120px;
+            transition: transform 0.3s ease, height 0.3s ease; /* Smooth transition on hover */
+        }
+        .avatar:hover {
+            height: 132px; /* Increase size by 20px */
+            transform: scale(1.1); /* Slight scaling for smooth enlargement */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Geo Game Graphs</h1>
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <a href="https://www.instagram.com/geo_game_graphs/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/geo_game_graphs" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <p>I use a statistical model (based on real pro-tournament data) to determine the probability of winning geo matches accounting for hp, multipliers & game mode</p>
+
+        <h2>2024 🌏 ASIA REGIONAL FINALS</h2>
+        <div class="gallery">
+            <img src="2024_Asia_Regionals/image1.png" loading="lazy" alt="image1">
+            <img src="2024_Asia_Regionals/image2.png" loading="lazy" alt="image2">
+            <img src="2024_Asia_Regionals/image3.png" loading="lazy" alt="image3">
+            <img src="2024_Asia_Regionals/image4.png" loading="lazy" alt="image4">
+            <img src="2024_Asia_Regionals/image5.png" loading="lazy" alt="image5">
+            <img src="2024_Asia_Regionals/image6.png" loading="lazy" alt="image6">
+            <img src="2024_Asia_Regionals/image7.png" loading="lazy" alt="image7">
+            <img src="2024_Asia_Regionals/image8.png" loading="lazy" alt="image8">
+            <img src="2024_Asia_Regionals/image9.png" loading="lazy" alt="image9">
+            <img src="2024_Asia_Regionals/image10.png" loading="lazy" alt="image10">
+            <img src="2024_Asia_Regionals/image11.png" loading="lazy" alt="image11">
+            <img src="2024_Asia_Regionals/image12.png" loading="lazy" alt="image12">
+            <img src="2024_Asia_Regionals/image13.png" loading="lazy" alt="image13">
+            <img src="2024_Asia_Regionals/image14.png" loading="lazy" alt="image14">
+            <img src="2024_Asia_Regionals/image16.png" loading="lazy" alt="image16">
+            <img src="2024_Asia_Regionals/image17.png" loading="lazy" alt="image17">
+            <img src="2024_Asia_Regionals/image18.png" loading="lazy" alt="image18">
+        </div>
+
+        <h2>2024 🌍 EUROPE REGIONAL FINALS</h2>
+        <div class="gallery">
+            <img src="2024_Europe_Regionals/image1.png" loading="lazy" alt="image1">
+            <img src="2024_Europe_Regionals/image2.png" loading="lazy" alt="image2">
+            <img src="2024_Europe_Regionals/image3.png" loading="lazy" alt="image3">
+            <img src="2024_Europe_Regionals/image4.png" loading="lazy" alt="image4">
+            <img src="2024_Europe_Regionals/image5.png" loading="lazy" alt="image5">
+            <img src="2024_Europe_Regionals/image6.png" loading="lazy" alt="image6">
+            <img src="2024_Europe_Regionals/image7.png" loading="lazy" alt="image7">
+            <img src="2024_Europe_Regionals/image8.png" loading="lazy" alt="image8">
+            <img src="2024_Europe_Regionals/image9.png" loading="lazy" alt="image9">
+            <img src="2024_Europe_Regionals/image10.png" loading="lazy" alt="image10">
+            <img src="2024_Europe_Regionals/image11.png" loading="lazy" alt="image11">
+            <img src="2024_Europe_Regionals/image12.png" loading="lazy" alt="image12">
+            <img src="2024_Europe_Regionals/image13.png" loading="lazy" alt="image13">
+            <img src="2024_Europe_Regionals/image14.png" loading="lazy" alt="image14">
+            <img src="2024_Europe_Regionals/image15.png" loading="lazy" alt="image15">
+            <img src="2024_Europe_Regionals/image16.png" loading="lazy" alt="image16">
+            <img src="2024_Europe_Regionals/image17.png" loading="lazy" alt="image17">
+            <img src="2024_Europe_Regionals/image18.png" loading="lazy" alt="image18">
+            <img src="2024_Europe_Regionals/image19.png" loading="lazy" alt="image19">
+            <img src="2024_Europe_Regionals/image20.png" loading="lazy" alt="image20">
+            <img src="2024_Europe_Regionals/image21.png" loading="lazy" alt="image21">
+            <img src="2024_Europe_Regionals/image22.png" loading="lazy" alt="image22">
+            <img src="2024_Europe_Regionals/image23.png" loading="lazy" alt="image23">
+            <img src="2024_Europe_Regionals/image24.png" loading="lazy" alt="image24">
+            <img src="2024_Europe_Regionals/image25.png" loading="lazy" alt="image25">
+            <img src="2024_Europe_Regionals/image26.png" loading="lazy" alt="image26">
+            <img src="2024_Europe_Regionals/image27.png" loading="lazy" alt="image27">
+            <img src="2024_Europe_Regionals/image28.png" loading="lazy" alt="image28">
+            <img src="2024_Europe_Regionals/image29.png" loading="lazy" alt="image29">
+            <img src="2024_Europe_Regionals/image30.png" loading="lazy" alt="image30">
+            <img src="2024_Europe_Regionals/image31.png" loading="lazy" alt="image31">
+            <img src="2024_Europe_Regionals/image32.png" loading="lazy" alt="image32">
+        </div>
+
+        <h2>2024 🌎 AMERICAS REGIONAL FINALS</h2>
+        <div class="gallery">
+            <img src="2024_Americas_Regionals/image1.png" loading="lazy" alt="image1">
+            <img src="2024_Americas_Regionals/image2.png" loading="lazy" alt="image2">
+            <img src="2024_Americas_Regionals/image3.png" loading="lazy" alt="image3">
+            <img src="2024_Americas_Regionals/image4.png" loading="lazy" alt="image4">
+            <img src="2024_Americas_Regionals/image5.png" loading="lazy" alt="image5">
+            <img src="2024_Americas_Regionals/image6.png" loading="lazy" alt="image6">
+            <img src="2024_Americas_Regionals/image7.png" loading="lazy" alt="image7">
+            <img src="2024_Americas_Regionals/image8.png" loading="lazy" alt="image8">
+            <img src="2024_Americas_Regionals/image9.png" loading="lazy" alt="image9">
+            <img src="2024_Americas_Regionals/image10.png" loading="lazy" alt="image10">
+            <img src="2024_Americas_Regionals/image11.png" loading="lazy" alt="image11">
+            <img src="2024_Americas_Regionals/image12.png" loading="lazy" alt="image12">
+            <img src="2024_Americas_Regionals/image13.png" loading="lazy" alt="image13">
+            <img src="2024_Americas_Regionals/image14.png" loading="lazy" alt="image14">
+            <img src="2024_Americas_Regionals/image15.png" loading="lazy" alt="image15">
+            <img src="2024_Americas_Regionals/image16.png" loading="lazy" alt="image16">
+            <img src="2024_Americas_Regionals/image17.png" loading="lazy" alt="image17">
+            <img src="2024_Americas_Regionals/image18.png" loading="lazy" alt="image18">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <div class="social-media">
+            <a href="https://www.instagram.com/geo_game_graphs/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/geo_game_graphs" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+
+        <a href="https://x.com/geo_game_graphs" target="_blank" aria-label="Instagram">
+            <img src="avatar.png" alt="Avatar" class="avatar">
+        </a>
+
+        
+    </div>
+</body>
+</html>
