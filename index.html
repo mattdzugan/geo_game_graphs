@@ -70,20 +70,70 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: 1fr; /* Start with a single column by default */
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr); /* Start with 2 columns by default */
+    gap: 20px;
         }
 
         .gallery img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            cursor: pointer;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 90%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         /* For larger screens, switch to 3 columns */
         @media (min-width: 800px) {
             .gallery {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        /* For larger screens, switch to 3 columns */
+        @media (min-width: 1200px) {
+            .gallery {
+                grid-template-columns: repeat(6, 1fr);
             }
         }
 
@@ -116,80 +166,80 @@
 
         <h2>2024 🌏 ASIA REGIONAL FINALS</h2>
         <div class="gallery">
-            <img src="2024_Asia_Regionals/image1.png" loading="lazy" alt="image1">
-            <img src="2024_Asia_Regionals/image2.png" loading="lazy" alt="image2">
-            <img src="2024_Asia_Regionals/image3.png" loading="lazy" alt="image3">
-            <img src="2024_Asia_Regionals/image4.png" loading="lazy" alt="image4">
-            <img src="2024_Asia_Regionals/image5.png" loading="lazy" alt="image5">
-            <img src="2024_Asia_Regionals/image6.png" loading="lazy" alt="image6">
-            <img src="2024_Asia_Regionals/image7.png" loading="lazy" alt="image7">
-            <img src="2024_Asia_Regionals/image8.png" loading="lazy" alt="image8">
-            <img src="2024_Asia_Regionals/image9.png" loading="lazy" alt="image9">
-            <img src="2024_Asia_Regionals/image10.png" loading="lazy" alt="image10">
-            <img src="2024_Asia_Regionals/image11.png" loading="lazy" alt="image11">
-            <img src="2024_Asia_Regionals/image12.png" loading="lazy" alt="image12">
-            <img src="2024_Asia_Regionals/image13.png" loading="lazy" alt="image13">
-            <img src="2024_Asia_Regionals/image14.png" loading="lazy" alt="image14">
-            <img src="2024_Asia_Regionals/image16.png" loading="lazy" alt="image16">
-            <img src="2024_Asia_Regionals/image17.png" loading="lazy" alt="image17">
-            <img src="2024_Asia_Regionals/image18.png" loading="lazy" alt="image18">
+            <img src="2024_Asia_Regionals/image1.png" loading="lazy" alt="image1" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image2.png" loading="lazy" alt="image2" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image3.png" loading="lazy" alt="image3" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image4.png" loading="lazy" alt="image4" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image5.png" loading="lazy" alt="image5" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image6.png" loading="lazy" alt="image6" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image7.png" loading="lazy" alt="image7" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image8.png" loading="lazy" alt="image8" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image9.png" loading="lazy" alt="image9" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image10.png" loading="lazy" alt="image10" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image11.png" loading="lazy" alt="image11" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image12.png" loading="lazy" alt="image12" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image13.png" loading="lazy" alt="image13" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image14.png" loading="lazy" alt="image14" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image16.png" loading="lazy" alt="image16" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image17.png" loading="lazy" alt="image17" onclick="openModal(this.src)">
+            <img src="2024_Asia_Regionals/image18.png" loading="lazy" alt="image18" onclick="openModal(this.src)">
         </div>
 
         <h2>2024 🌍 EUROPE REGIONAL FINALS</h2>
         <div class="gallery">
-            <img src="2024_Europe_Regionals/image1.png" loading="lazy" alt="image1">
-            <img src="2024_Europe_Regionals/image2.png" loading="lazy" alt="image2">
-            <img src="2024_Europe_Regionals/image3.png" loading="lazy" alt="image3">
-            <img src="2024_Europe_Regionals/image4.png" loading="lazy" alt="image4">
-            <img src="2024_Europe_Regionals/image5.png" loading="lazy" alt="image5">
-            <img src="2024_Europe_Regionals/image6.png" loading="lazy" alt="image6">
-            <img src="2024_Europe_Regionals/image7.png" loading="lazy" alt="image7">
-            <img src="2024_Europe_Regionals/image8.png" loading="lazy" alt="image8">
-            <img src="2024_Europe_Regionals/image9.png" loading="lazy" alt="image9">
-            <img src="2024_Europe_Regionals/image10.png" loading="lazy" alt="image10">
-            <img src="2024_Europe_Regionals/image11.png" loading="lazy" alt="image11">
-            <img src="2024_Europe_Regionals/image12.png" loading="lazy" alt="image12">
-            <img src="2024_Europe_Regionals/image13.png" loading="lazy" alt="image13">
-            <img src="2024_Europe_Regionals/image14.png" loading="lazy" alt="image14">
-            <img src="2024_Europe_Regionals/image15.png" loading="lazy" alt="image15">
-            <img src="2024_Europe_Regionals/image16.png" loading="lazy" alt="image16">
-            <img src="2024_Europe_Regionals/image17.png" loading="lazy" alt="image17">
-            <img src="2024_Europe_Regionals/image18.png" loading="lazy" alt="image18">
-            <img src="2024_Europe_Regionals/image19.png" loading="lazy" alt="image19">
-            <img src="2024_Europe_Regionals/image20.png" loading="lazy" alt="image20">
-            <img src="2024_Europe_Regionals/image21.png" loading="lazy" alt="image21">
-            <img src="2024_Europe_Regionals/image22.png" loading="lazy" alt="image22">
-            <img src="2024_Europe_Regionals/image23.png" loading="lazy" alt="image23">
-            <img src="2024_Europe_Regionals/image24.png" loading="lazy" alt="image24">
-            <img src="2024_Europe_Regionals/image25.png" loading="lazy" alt="image25">
-            <img src="2024_Europe_Regionals/image26.png" loading="lazy" alt="image26">
-            <img src="2024_Europe_Regionals/image27.png" loading="lazy" alt="image27">
-            <img src="2024_Europe_Regionals/image28.png" loading="lazy" alt="image28">
-            <img src="2024_Europe_Regionals/image29.png" loading="lazy" alt="image29">
-            <img src="2024_Europe_Regionals/image30.png" loading="lazy" alt="image30">
-            <img src="2024_Europe_Regionals/image31.png" loading="lazy" alt="image31">
-            <img src="2024_Europe_Regionals/image32.png" loading="lazy" alt="image32">
+            <img src="2024_Europe_Regionals/image1.png" loading="lazy" alt="image1" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image2.png" loading="lazy" alt="image2" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image3.png" loading="lazy" alt="image3" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image4.png" loading="lazy" alt="image4" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image5.png" loading="lazy" alt="image5" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image6.png" loading="lazy" alt="image6" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image7.png" loading="lazy" alt="image7" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image8.png" loading="lazy" alt="image8" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image9.png" loading="lazy" alt="image9" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image10.png" loading="lazy" alt="image10" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image11.png" loading="lazy" alt="image11" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image12.png" loading="lazy" alt="image12" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image13.png" loading="lazy" alt="image13" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image14.png" loading="lazy" alt="image14" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image15.png" loading="lazy" alt="image15" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image16.png" loading="lazy" alt="image16" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image17.png" loading="lazy" alt="image17" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image18.png" loading="lazy" alt="image18" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image19.png" loading="lazy" alt="image19" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image20.png" loading="lazy" alt="image20" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image21.png" loading="lazy" alt="image21" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image22.png" loading="lazy" alt="image22" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image23.png" loading="lazy" alt="image23" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image24.png" loading="lazy" alt="image24" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image25.png" loading="lazy" alt="image25" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image26.png" loading="lazy" alt="image26" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image27.png" loading="lazy" alt="image27" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image28.png" loading="lazy" alt="image28" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image29.png" loading="lazy" alt="image29" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image30.png" loading="lazy" alt="image30" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image31.png" loading="lazy" alt="image31" onclick="openModal(this.src)">
+            <img src="2024_Europe_Regionals/image32.png" loading="lazy" alt="image32" onclick="openModal(this.src)">
         </div>
 
         <h2>2024 🌎 AMERICAS REGIONAL FINALS</h2>
         <div class="gallery">
-            <img src="2024_Americas_Regionals/image1.png" loading="lazy" alt="image1">
-            <img src="2024_Americas_Regionals/image2.png" loading="lazy" alt="image2">
-            <img src="2024_Americas_Regionals/image3.png" loading="lazy" alt="image3">
-            <img src="2024_Americas_Regionals/image4.png" loading="lazy" alt="image4">
-            <img src="2024_Americas_Regionals/image5.png" loading="lazy" alt="image5">
-            <img src="2024_Americas_Regionals/image6.png" loading="lazy" alt="image6">
-            <img src="2024_Americas_Regionals/image7.png" loading="lazy" alt="image7">
-            <img src="2024_Americas_Regionals/image8.png" loading="lazy" alt="image8">
-            <img src="2024_Americas_Regionals/image9.png" loading="lazy" alt="image9">
-            <img src="2024_Americas_Regionals/image10.png" loading="lazy" alt="image10">
-            <img src="2024_Americas_Regionals/image11.png" loading="lazy" alt="image11">
-            <img src="2024_Americas_Regionals/image12.png" loading="lazy" alt="image12">
-            <img src="2024_Americas_Regionals/image13.png" loading="lazy" alt="image13">
-            <img src="2024_Americas_Regionals/image14.png" loading="lazy" alt="image14">
-            <img src="2024_Americas_Regionals/image15.png" loading="lazy" alt="image15">
-            <img src="2024_Americas_Regionals/image16.png" loading="lazy" alt="image16">
-            <img src="2024_Americas_Regionals/image17.png" loading="lazy" alt="image17">
+            <img src="2024_Americas_Regionals/image1.png" loading="lazy" alt="image1" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image2.png" loading="lazy" alt="image2" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image3.png" loading="lazy" alt="image3" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image4.png" loading="lazy" alt="image4" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image5.png" loading="lazy" alt="image5" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image6.png" loading="lazy" alt="image6" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image7.png" loading="lazy" alt="image7" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image8.png" loading="lazy" alt="image8" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image9.png" loading="lazy" alt="image9" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image10.png" loading="lazy" alt="image10" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image11.png" loading="lazy" alt="image11" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image12.png" loading="lazy" alt="image12" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image13.png" loading="lazy" alt="image13" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image14.png" loading="lazy" alt="image14" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image15.png" loading="lazy" alt="image15" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image16.png" loading="lazy" alt="image16" onclick="openModal(this.src)">
+            <img src="2024_Americas_Regionals/image17.png" loading="lazy" alt="image17" onclick="openModal(this.src)">
         </div>
 
         <br>
@@ -208,7 +258,39 @@
             <img src="avatar.png" alt="Avatar" class="avatar">
         </a>
 
+
+        <!-- Modal structure -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <img id="modalImage" src="">
+            </div>
+        </div>
+
         
     </div>
+
+     <!-- JavaScript for Modal functionality -->
+     <script>
+        function openModal(src) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Close the modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
